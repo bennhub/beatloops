@@ -325,20 +325,21 @@
         margin-top: 5px;
     }
 
-    i.bi-heart {
-        font-size: 25px;
+   
+    i.bi-camera-video{
+        font-size: 35px;
         /* Adjust the font-size to your desired size */
-        color: rgb(197, 75, 75);
-
+        color: rgb(159, 159, 159);
     }
     
+
     i.bi-arrow-left-short {
         font-size: 18px;
         color: rgb(248, 248, 248);
 
     }
 
- 
+
 
 
     /* Global Pitch Control */
@@ -415,52 +416,52 @@
         box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.47);
 
     }
-   
+
     #pitch-toggle:hover {
         opacity: 0.8;
         cursor: pointer;
     }
 
-     #reset-pitch-btn:hover {
+    #reset-pitch-btn:hover {
         cursor: pointer;
     }
 
-   #reset-pitch-btn {
-    display: block;
-    padding: 6px 6px;
-    border: 1px solid #585858;
-    border-radius: 2px;
-    background: #191919;
-    font-weight: bold;
-    font-size: 15px;
-    color:  rgb(222, 222, 222);
-    transition: background 0.2s ease;
-    box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.47);
-    position: static;
-    margin: 30px 0px 0px 0px;
-}
+    #reset-pitch-btn {
+        display: block;
+        padding: 6px 6px;
+        border: 1px solid #585858;
+        border-radius: 2px;
+        background: #191919;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgb(222, 222, 222);
+        transition: background 0.2s ease;
+        box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.47);
+        position: static;
+        margin: 30px 0px 0px 0px;
+    }
 
-#reset-pitch-btn:active {
-    /* Add a pressed-in effect */
-    transform: translateY(2px);
-    box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.47);
-    background-color: #ede5e5;
-}
+    #reset-pitch-btn:active {
+        /* Add a pressed-in effect */
+        transform: translateY(2px);
+        box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.47);
+        background-color: #ede5e5;
+    }
 
-button[onclick="resetGlobalPitch()"] {
-    display: block;
-    padding: 4px 4px;
-    border: 1px solid #585858;
-    border-radius: 2px;
-    background: #191919;
-    font-weight: bold;
-    font-size: 12px;
-    color:  rgb(222, 222, 222);
-    transition: background 0.2s ease;
-    box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.47);
-    position: static;
-    margin: 30px 0px 0px 0px;
-}
+    button[onclick="resetGlobalPitch()"] {
+        display: block;
+        padding: 4px 4px;
+        border: 1px solid #585858;
+        border-radius: 2px;
+        background: #191919;
+        font-weight: bold;
+        font-size: 12px;
+        color: rgb(222, 222, 222);
+        transition: background 0.2s ease;
+        box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.47);
+        position: static;
+        margin: 30px 0px 0px 0px;
+    }
 
     .controls-container {
         display: flex;
@@ -498,29 +499,7 @@ button[onclick="resetGlobalPitch()"] {
         width: 300px;
     }
 
-    #float-btn {
-        position: fixed;
-        right: 8px;
-        bottom: 20px;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background-color: transparent;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        display: flex;
-        /* Use Flexbox */
-        justify-content: center;
-        /* Horizontally center the heart icon */
-        align-items: center;
-        /* Vertically center the heart icon */
-    }
-
-    #float-btn:hover {
-        transform: scale(1.1);
-    }
-
     #back-btn {
-
         display: block;
         padding: 7px 11px;
         margin: -50spx 0px 0px 0px;
@@ -560,7 +539,7 @@ button[onclick="resetGlobalPitch()"] {
         background: #585858;
         color: #fff;
     }
-   
+
 
     .page-footer {
         background-color: #191919;
@@ -580,7 +559,6 @@ button[onclick="resetGlobalPitch()"] {
 
     /* Modal styles */
     .modal {
-        display: none;
         position: fixed;
         z-index: 1;
         left: 0;
@@ -588,8 +566,7 @@ button[onclick="resetGlobalPitch()"] {
         width: 100%;
         height: 100%;
         overflow: auto;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: transparent
     }
 
     /* Modal Content/Box */
@@ -601,7 +578,57 @@ button[onclick="resetGlobalPitch()"] {
         width: 80%;
     }
 
-   
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        color: #aaa;
+        cursor: pointer;
+    }
+
+    .close:hover {
+        color: #000;
+    }
+
+    #float-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 5%;
+        background-color: transparent;
+        border: solid 1px transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 20px 0px 0px 0px;
+        /* Align the button to the right */
+    }
+
+    #float-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .video-container {
+        position: center;
+        padding-bottom: 30%;
+        /* 16:9 aspect ratio (height / width) */
+        max-width: 600px;
+        /* Limit the container's width to the width of its parent */
+        max-height: 300px;
+        overflow: hidden;
+      
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
     .header {
         display: flex;
         align-items: center;
@@ -647,7 +674,7 @@ button[onclick="resetGlobalPitch()"] {
         display: block;
         object-fit: contain;
         border: solid 5px rgb(237, 237, 237);
-        cursor:pointer;
+        cursor: pointer;
     }
 
     /* Media query for mobile devices */
@@ -663,6 +690,7 @@ button[onclick="resetGlobalPitch()"] {
             /* Counteract absolute positioning */
         }
     }
+
     /* Styles for mobile screens */
     @media (max-width: 767px) {
 
@@ -730,7 +758,7 @@ button[onclick="resetGlobalPitch()"] {
             max-height: 62px;
             padding-bottom: 15%;
         }
-        
+
 
         .responsive-image {
             display: block;
@@ -740,6 +768,24 @@ button[onclick="resetGlobalPitch()"] {
             max-height: 275px;
             object-fit: contain;
             border: solid 5px rgb(224, 224, 113);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio (height / width) */
+            max-width: 100%;
+            /* Limit the container's width to the width of its parent */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -751,22 +797,7 @@ button[onclick="resetGlobalPitch()"] {
 
 
 <body>
-    <!-- Floating button -->
-    <button id="float-btn"><i class="bi bi-heart"></i></button>
 
-
-    <!-- Modal -->
-    <div id="modal" class="modal">
-
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <h5>Hi I might use this Modal for something in the future, like a intro video or something</h5>
-            <span class="close">&times;</span>
-
-        </div>
-
-    </div>
     <div class="main-container">
 
         <div class="header-container">
@@ -777,20 +808,42 @@ button[onclick="resetGlobalPitch()"] {
                     <div class="header-title">
                         <h8><span style="color: white;">scratch </span> <span style="color:rgb(42, 130, 171);">
                                 loopers</h8>
+
+                        <!-- Modal Button -->
+                        <button id="float-btn" onclick="openModal()"><i class="bi bi-camera-video"></i></button>
+                        <!-- Modal -->
+                        <div id="modal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <p>Not sure what to use this modal for, but here's a scratch vid until I figure it out
+                                </p>
+                                <div class="video-container">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/FQzP70xMxS4?start=53"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <span class="close">&times;</span>
+                            </div>
+                        </div>
+                        <!-- Modal END -->
+
                     </div>
 
                 </div>
 
 
+
                 <div class="col-md-6">
                     <label for="tab2">
-                    <img src="images/layLow2.png" class="featured-img" alt="Responsive image">
-                    
-                    <div class="h9">
-                        <span style="color: white;"></span>Featured Looper</span> </br>
-                        B.Hayes | Laylow Loops
-                    </div>
-                </label>
+                        <img src="images/layLow2.png" class="featured-img" alt="Responsive image">
+
+                        <div class="h9">
+                            <span style="color: white;"></span>Featured Looper</span> </br>
+                            B.Hayes | Laylow Loops
+                        </div>
+                    </label>
                 </div>
 
             </div>
@@ -798,11 +851,13 @@ button[onclick="resetGlobalPitch()"] {
 
         </div>
 
+
         <div class="nav-container">
             <button id="back-btn" class="hidden">Home</button>
         </div>
+
         <div class="loops-title" id="loops-title">
-            <a href="http://b-n.me/sandBox.html">
+            <a href="https://bennhub.github.io/beatloops/">
                 <h6>Loop Selector</h6>
                 <i class="bi bi-infinity"></i>
             </a>
@@ -1050,7 +1105,7 @@ button[onclick="resetGlobalPitch()"] {
         <div class="pitch-controls">
             <a href="#loops-title" id="go-to-loop-selector">
                 <button id="previous-btn"><i class="bi bi-arrow-left-short"></i>Back</button>
-                
+
             </a>
             <div class="controls-container">i
                 <div class="pitch-control-title">
@@ -1240,7 +1295,7 @@ button[onclick="resetGlobalPitch()"] {
 
         const pitchControl = document.getElementById('global-pitch-control');
         const toggleBtn = document.getElementById('pitch-toggle');
-        
+
         let isPitchEnabled = true;
         toggleBtn.addEventListener('click', () => {
 
@@ -1263,18 +1318,18 @@ button[onclick="resetGlobalPitch()"] {
             } else {
                 toggleBtn.textContent = 'Unlock Pitch';
                 toggleBtn.style.color = "rgb(156, 45, 20)"; // Set the color to the disabled color
-                
+
             }
-            
+
 
         });
 
         // Hide initially on page load
-            document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.pitch-controls').style.display = 'none';
         });
 
-        
+
         //Tabs Logic start//
 
         function switchTab(tabIndex) {
@@ -1344,9 +1399,6 @@ button[onclick="resetGlobalPitch()"] {
     <script>
         // Modal Logic
 
-        function closeTab() {
-            $('#right-tab').removeClass('show active');
-        }
         // Get modal element
         var modal = document.getElementById('modal');
 
@@ -1357,7 +1409,7 @@ button[onclick="resetGlobalPitch()"] {
         var close = document.getElementsByClassName("close")[0];
 
         // Open modal when button clicked
-        btn.onclick = function () {
+        function openModal() {
             modal.style.display = "block";
         }
 
@@ -1372,6 +1424,7 @@ button[onclick="resetGlobalPitch()"] {
                 modal.style.display = "none";
             }
         }
+
 
     </script>
 
