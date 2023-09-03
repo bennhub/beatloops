@@ -10,809 +10,37 @@
     <!-- Favicon and Apple Touch Icon -->
     <link rel="shortcut icon" href="images/content/favicon.ico">
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- Icomoon Icon Fonts -->
-    <link rel="stylesheet" href="css/icomoon.css">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-    <!-- Theme style -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Additional Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!--<script src="js/beatloops.js"></script> -->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Additional Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!--<script src="loopsLogic.js"></script>-->
 
     <title>beat loops</title>
 </head>
-<style>
-    .main-container {
-        background-color: #191919;
-        padding: 5%;
-    }
-
-    body {
-        /**background: rgba(243, 242, 242, 0.157)  url('images/ttbg1.jpg') center/cover no-repeat fixed; /* Add this line */
-        /**background-size: cover;*/
-        background: #393939;
-        padding: 3vw;
-        font-family: "Roboto", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-weight: 300;
-        line-height: 1.6;
-        max-width: 60rem;
-        margin: 0 auto;
-        padding-top: 0;
-        font-size: 112%;
-    }
-
-    h1,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: rgb(231, 231, 231);
-        font-family: "Open Sans", Arial, sans-serif;
-        font-weight: 500;
-        margin: 0 0 0 0;
-    }
-
-    .h8 {
-
-        font-weight: bold;
-        background-color: black;
-        padding: 1px;
-
-    }
-
-
-    h2 {
-        font-size: 36px;
-        font-weight: bold;
-        color: rgb(42, 130, 171);
-        background-color: #191919;
-        padding: 15px;
-        display: inline-block;
-        margin-top: -100px;
-        border: 1px solid #585858;
-        border-radius: 0px;
-    }
-
-    h2 span:first-child {
-        color: white;
-    }
-
-    h2 span:last-child {
-        color: rgb(42, 130, 171);
-    }
-
-    p {
-        color: rgb(42, 130, 171);
-        font-family: "Open Sans", Arial, sans-serif;
-        font-weight: 700;
-        margin: 0 0 30px 0;
-        text-align: left;
-    }
-
-    a {
-        color: rgb(231, 231, 234);
-        /* Change this to the desired color */
-        text-decoration: none;
-        /* Remove underline if desired */
-    }
-
-    a:hover {
-        color: rgb(56, 181, 243);
-        /* Change this to the desired color on hover */
-    }
-
-    .header-container {
-        background-color: #191919;
-    }
-
-    .header-title {
-        margin: -80px 0px 0px 0px;
-        text-align: left;
-    }
-
-    .nav-container {
-        background-color: #191919;
-    }
-
-    .tabs {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        padding: 0px;
-        background-color: #191919;
-    }
-
-    .tabs label {
-        -webkit-box-ordinal-group: 2;
-        -webkit-order: 1;
-        -ms-flex-order: 1;
-        order: 1;
-        display: block;
-        padding: 0px 0px;
-        margin-right: 0.5rem;
-        cursor: pointer;
-        border: 1px solid #585858;
-        border-radius: 0px;
-        background-color: #191919;
-        font-weight: bold;
-        color: rgb(242, 237, 237);
-        -webkit-transition: background ease 0.2s;
-        transition: background ease 0.2s;
-    }
-
-    .tabs label:hover {
-        opacity: 0.8;
-    }
-
-    .tabs .tab {
-        -webkit-box-ordinal-group: 100;
-        -webkit-order: 99;
-        -ms-flex-order: 99;
-        order: 99;
-        -webkit-box-flex: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-        width: 100%;
-        display: none;
-        padding: 1rem;
-        border: 1px solid #f4f4f4;
-        border-radius: 5px;
-        background: #191919;
-    }
-
-    .tabs input[type="radio"] {
-        position: absolute;
-        opacity: 0;
-    }
-
-    .tabs input[type="radio"]:checked+label {
-
-        border: 1px solid rgb(42, 130, 171);
-        border-radius: 2px;
-        opacity: 0.7;
-        display: block;
-    }
-
-    .tab-content {
-        display: flex;
-        justify-content: left;
-        text-align: left;
-        padding-bottom: 0px;
-        font-size: 12px;
-    }
-
-    .tab-image {
-        width: 95px;
-        height: 95px;
-        background-color: #191919;
-        object-fit: contain;
-    }
-
-
-
-    .button {
-        display: inline-block;
-        padding: 20px 20px;
-        color: #f4f4f4;
-        font-size: 12px;
-        border: solid 1px #f4f4f4;
-        cursor: pointer;
-        border-radius: 4px;
-        height: 60px;
-        background-color: #191919;
-    }
-
-    .button:hover {
-        opacity: 0.8;
-    }
-
-
-    .FlexContainer {
-        flex-direction: row;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        width: 40%;
-        background-color: #191919;
-        overflow: auto;
-        margin: 0 auto;
-        /* Center the tab container horizontally */
-    }
-
-    .FlexContainer div {
-        width: calc(33.33% - 10px);
-        /* Each button takes 33.33% width for a 3x3 grid */
-        margin: 5px;
-    }
-
-    .FlexContainer div {
-        width: calc(33.33% - 10px);
-        /* Each button takes 33.33% width for a 3x3 grid */
-        margin: 5px;
-    }
-
-    .responsive-image {
-        display: block;
-        margin: 20px auto;
-        padding: 5px;
-        max-width: 500px;
-        max-height: 400px;
-        object-fit: contain;
-        display: block;
-        border: solid 5px rgb(224, 224, 113);
-    }
-
-    .logo-image {
-        width: 100%;
-        padding: 0;
-        margin: 0px 0px -30px 0px;
-        max-width: 253px;
-        max-height: 190px;
-        transform: scale(0.4);
-        transform-origin: 0 0;
-        backface-visibility: hidden;
-    }
-
-    .about-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding-bottom: 10px;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .pitch-control-title {
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 20px;
-    }
-
-    .loops-title {
-        padding: 8px;
-        position: relative;
-        margin-top: 5px;
-        display: flex;
-        /* Use Flexbox */
-        align-items: center;
-        /* Vertically align items in the center */
-
-    }
-
-    .loops-title a {
-        display: flex;
-        /* Make the link a flex container too */
-        align-items: center;
-        /* Vertically align items in the center within the link */
-    }
-
-    .loops-title h6 {
-        margin-right: 10px;
-        /* Add some space between the text and the icon */
-    }
-
-    .loops-title i.bi-infinity {
-        font-size: 24px;
-        /* Adjust the font-size to your desired size */
-        margin-top: 5px;
-    }
-
-   
-    i.bi-camera-video{
-        font-size: 35px;
-        /* Adjust the font-size to your desired size */
-        color: rgb(159, 159, 159);
-    }
-    
-
-    i.bi-arrow-left-short {
-        font-size: 18px;
-        color: rgb(248, 248, 248);
-
-    }
-
-
-
-
-    /* Global Pitch Control */
-    #global-pitch-control {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 80%;
-        /* Adjust the width as desired */
-        height: 8px;
-        border-radius: 1px;
-        background: #ffffff;
-        outline: none;
-        opacity: 0.7;
-        transition: opacity 0.2s;
-        margin: 0 auto;
-        /* Center the slider horizontally */
-        display: block;
-        /* Add this line to ensure the slider is a b
-         element */
-        margin-top: 50px;
-        /* Add some top margin to separate it from the buttons */
-        margin-bottom: 20px;
-        border: solid 0px rgb(255, 255, 255);
-        /* Add border style */
-        border-radius: 15px;
-    }
-
-    #global-pitch-control::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        background: url(images/pitch.png) center center no-repeat;
-        background-size: 40px;
-        appearance: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 10%;
-        border: 2px solid;
-        border-color: rgb(29, 130, 188);
-        cursor: pointer;
-        /* Adjust the value to center the thumb */
-        transform: none;
-        /* Center the thumb precisely */
-        position: relative;
-    }
-
-
-
-    #global-pitch-control::-moz-range-thumb {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: #4a90e2;
-        cursor: pointer;
-    }
-
-    #global-pitch-control:hover {
-        opacity: 1;
-    }
-
-    #global-pitch-control:focus {
-        outline: none;
-    }
-
-    #pitch-toggle {
-        display: block;
-        padding: 6px 6px;
-        border: 1px solid #585858;
-        border-radius: 2px;
-        background: #191919;
-        color: rgb(222, 222, 222);
-        font-weight: bold;
-        font-size: 15px;
-        margin: 30px 0px 0px 50%;
-        transition: background 0.2s ease;
-        box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.47);
-
-    }
-
-    #pitch-toggle:hover {
-        opacity: 0.8;
-        cursor: pointer;
-    }
-
-    #reset-pitch-btn:hover {
-        cursor: pointer;
-    }
-
-    #reset-pitch-btn {
-        display: block;
-        padding: 6px 6px;
-        border: 1px solid #585858;
-        border-radius: 2px;
-        background: #191919;
-        font-weight: bold;
-        font-size: 15px;
-        color: rgb(222, 222, 222);
-        transition: background 0.2s ease;
-        box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.47);
-        position: static;
-        margin: 30px 0px 0px 0px;
-    }
-
-    #reset-pitch-btn:active {
-        /* Add a pressed-in effect */
-        transform: translateY(2px);
-        box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.47);
-        background-color: #ede5e5;
-    }
-
-    button[onclick="resetGlobalPitch()"] {
-        display: block;
-        padding: 4px 4px;
-        border: 1px solid #585858;
-        border-radius: 2px;
-        background: #191919;
-        font-weight: bold;
-        font-size: 12px;
-        color: rgb(222, 222, 222);
-        transition: background 0.2s ease;
-        box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.47);
-        position: static;
-        margin: 30px 0px 0px 0px;
-    }
-
-    .controls-container {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 20px;
-        align-items: left;
-        Margin-top: 30px;
-        border: 1px solid #fff;
-        border-radius: 3px;
-        flex-direction: column;
-        background-color: #191919;
-
-    }
-
-    .pitch-slider {
-        width: 100%;
-    }
-
-    .pitch-buttons {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .mobile-text {
-        display: none;
-        /* Hide the text by default */
-    }
-
-
-    #right-tab {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 300px;
-    }
-
-    #back-btn {
-        display: block;
-        padding: 7px 11px;
-        margin: -50spx 0px 0px 0px;
-        border: 1px solid #585858;
-        border-radius: 0px;
-        background: #191919;
-        font-weight: bold;
-        color: rgb(219, 219, 219);
-        cursor: pointer;
-        /* Other label styles */
-        -webkit-transition: background ease 0.2s;
-        transition: background ease 0.2s;
-        -webkit-box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.47);
-        box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.47)
-    }
-
-    #back-btn:hover {
-        opacity: 0.8;
-    }
-
-    #previous-btn {
-        background: #191919;
-        color: #fff;
-        border: 1px solid #585858;
-        padding: 5px 18px 5px 5px;
-        font-size: 18px;
-        cursor: pointer;
-        transition: opacity 0.2s;
-        position: absolute;
-        margin: 0px auto;
-        border: solid 1px rgb(244, 237, 237);
-
-    }
-
-    #previous-btn:hover {
-        opacity: 0.8;
-        background: #585858;
-        color: #fff;
-    }
-
-
-    .page-footer {
-        background-color: #191919;
-        color: #eaeaea;
-        margin-top: 5%;
-        padding: 4%;
-    }
-
-    .page-footer a {
-        color: #2a93ab;
-    }
-
-    .footer-copyright {
-        background-color: #191919;
-        color: #eaeaea;
-    }
-
-    /* Modal styles */
-    .modal {
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: transparent
-    }
-
-    /* Modal Content/Box */
-    .modal-content {
-        background-color: #191919;
-        margin: 15% auto;
-        padding: 20px;
-        border: 1px solid #fbfbfb;
-        width: 80%;
-    }
-
-    .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 20px;
-        color: #aaa;
-        cursor: pointer;
-    }
-
-    .close:hover {
-        color: #000;
-    }
-
-    #float-btn {
-        width: 40px;
-        height: 40px;
-        border-radius: 5%;
-        background-color: transparent;
-        border: solid 1px transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        margin: 20px 0px 0px 0px;
-        /* Align the button to the right */
-    }
-
-    #float-btn:hover {
-        transform: scale(1.1);
-    }
-
-    .video-container {
-        position: center;
-        padding-bottom: 30%;
-        /* 16:9 aspect ratio (height / width) */
-        max-width: 600px;
-        /* Limit the container's width to the width of its parent */
-        max-height: 300px;
-        overflow: hidden;
-      
-    }
-
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-
-    .header {
-        display: flex;
-        align-items: center;
-    }
-
-    .h9 {
-        margin: 250px 77px 0px 10px;
-        justify-content: right;
-        /* Horizontal centering */
-        align-items: right;
-        /* Vertical centering */
-        color: rgb(253, 247, 247);
-        font-family: "Open Sans", Arial, sans-serif;
-        text-align: center;
-    }
-
-
-    @media screen and (max-width: 767px) {
-        .h9 {
-            margin: 0px 0px 0px 150px;
-            font-size: 18px;
-            /* Decrease font size for mobile view */
-            justify-content: right;
-            /* Horizontal centering */
-            color: #eaeaea;
-            text-align: center;
-            /* Horizontal centering */
-            display: block;
-            /* Override flex behavior */
-        }
-    }
-
-    /* Default styles for larger screens */
-    .featured-img {
-        float: right;
-        /* Float the image to the right */
-        max-width: 250px;
-        /* Make the image responsive, adjusting its width to fit its container */
-        max-height: 250px;
-        /* Maintain the aspect ratio of the image */
-        margin-right: 70px;
-        /* Adjust the margin to move the image to the left */
-        display: block;
-        object-fit: contain;
-        border: solid 5px rgb(237, 237, 237);
-        cursor: pointer;
-    }
-
-    /* Media query for mobile devices */
-    @media screen and (max-width: 767px) {
-        .featured-img {
-            float: right;
-            margin: -100px 0px 0px 0px;
-            max-width: 180px;
-            /* Set fixed smaller width */
-            max-height: 180px;
-            /* Set fixed smaller height */
-            transform: translate(0, 0);
-            /* Counteract absolute positioning */
-        }
-    }
-
-    /* Styles for mobile screens */
-    @media (max-width: 767px) {
-
-        #global-pitch-control::-webkit-slider-thumb {
-            margin-left: 1px;
-            /* Reset the left margin */
-            transform: none;
-            /* Reset the transform property */
-        }
-    }
-
-    @media (max-width: 768px) {
-
-        /* Adjust the max-width value to target mobile devices */
-        .mobile-text {
-            display: inline;
-            /* Show the text in mobile view */
-            margin-left: 10px;
-            /* Adjust the margin as needed */
-        }
-    }
-
-    @media (min-width: 769px) {
-
-        /* Adjust the min-width value to target desktop devices */
-        .mobile-text {
-            display: none;
-            /* Hide the text in desktop view */
-        }
-    }
-
-    /* Adjusted styles for mobile view */
-    @media (max-width: 500px) {
-        .FlexContainer {
-            width: 85%;
-            justify-content: center;
-            margin: 0 auto;
-            /* Center the tab container horizontally */
-            overflow: hidden;
-        }
-
-        .tab-image {
-            max-width: 61px;
-            max-height: 59px;
-            padding: 3px 0px 2px 0px;
-            margin: 1px 0px 0px 0px;
-            object-fit: contain;
-        }
-
-    }
-
-    @media (max-width: 769px) {
-
-        .tabs .tab,
-        .tabs label {
-            -webkit-box-ordinal-group: NaN;
-            -webkit-order: initial;
-            -ms-flex-order: initial;
-            order: initial;
-        }
-
-        .tabs label {
-            width: 100%;
-            max-width: 100%;
-            max-height: 62px;
-            padding-bottom: 15%;
-        }
-
-
-        .responsive-image {
-            display: block;
-            margin: 20px auto;
-            padding: 5px;
-            max-width: 380px;
-            max-height: 275px;
-            object-fit: contain;
-            border: solid 5px rgb(224, 224, 113);
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            /* 16:9 aspect ratio (height / width) */
-            max-width: 100%;
-            /* Limit the container's width to the width of its parent */
-            height: 0;
-            overflow: hidden;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .loops-title {
-        position: relative;
-    }
-</style>
-
-
 
 <body>
-
     <div class="main-container">
-
         <div class="header-container">
             <div class="row gx-1 ">
-
                 <div class="col-md-6">
                     <img src="images/beatloops.png" alt="Image description" class="logo-image">
                     <div class="header-title">
                         <h8><span style="color: white;">scratch </span> <span style="color:rgb(42, 130, 171);">
                                 loopers</h8>
-
+                        <!-- Modal 1 -->
                         <!-- Modal Button -->
-                        <button id="float-btn" onclick="openModal()"><i class="bi bi-camera-video"></i></button>
+                        <button id="float-btn" onclick="openModal1()"><i class="bi bi-camera-video"></i></button>
                         <!-- Modal -->
-                        <div id="modal" class="modal">
+                        <div id="modal1" class="modal">
                             <!-- Modal content -->
                             <div class="modal-content">
                                 <p>Not sure what to use this modal for, but here's a scratch vid until I figure it out
@@ -824,6 +52,27 @@
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen></iframe>
                                 </div>
+                                <span class="close">&times;</span>
+                            </div>
+                        </div>
+
+                        <!-- Modal 2 -->
+                        <button id="float-btn" onclick="openModal2()"><i class="bi bi-vinyl-fill"></i></button>
+                        <!-- Modal -->
+                        <div id="modal2" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <p>Download these scratch samples for free
+                                </p>
+                                <ul>
+                                    <li style="display: inline-block;"><audio controls="" src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part2.mp3"></audio></li>
+                                    <li style="display: inline-block;"><audio controls="" src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part3.mp3"></audio></li>
+                                    <li style="display: inline-block;"><audio controls="" src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part1.mp3"></audio></li>
+                                    <li style="display: inline-block;"><audio controls="" src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part4.mp3"></audio></li>
+                                    <li style="display: inline-block;"><audio controls="" src="https://soundsozai.com/wp-content/uploads/2020/06/Pizzicato_loop_92bpm.mp3"></audio>s</li>
+                                    <li style="display: inline-block;"><audio controls="" src="https://soundsozai.com/wp-content/uploads/2020/06/Flute_loop_92bpm.mp3"></audio></li>
+                                    
+                               </ul>
                                 <span class="close">&times;</span>
                             </div>
                         </div>
@@ -910,23 +159,28 @@
                 <!-- Global Pitch Control -->
                 <section id="flex-container-1" class="FlexContainer">
                     <div>
-                        <button onclick="togglePlay(1)" id="play-button1" class="button">Play</button>
+                        <button onclick="togglePlay(1)" id="play-button1" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm1"></span>
+                        </button>
                     </div>
                     <div>
-                        <button onclick="togglePlay(2)" id="play-button2" class="button">Play</button>
+                        <button onclick="togglePlay(2)" id="play-button2" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm2"></span>
+                        </button>
                     </div>
                     <div>
-                        <button onclick="togglePlay(3)" id="play-button3" class="button">Play</button>
+                        <button onclick="togglePlay(3)" id="play-button3" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm3"></span>
+                        </button>
                     </div>
                     <div>
-                        <button onclick="togglePlay(4)" id="play-button4" class="button">Play</button>
-                    </div>
-
-                    <div>
-                        <button onclick="togglePlay(6)" id="play-button6" class="button">Play</button>
-                    </div>
-                    <div>
-                        <button onclick="togglePlay()" id="play-button#" class="button">Play</button>
+                        <button onclick="togglePlay(4)" id="play-button4" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm4"></span>
+                        </button>
                     </div>
 
                 </section>
@@ -955,23 +209,36 @@
 
                 <section id="flex-container-2" class="FlexContainer">
                     <div>
-                        <button onclick="togglePlay(5)" id="play-button5" class="button">Play</button>
+                        <button onclick="togglePlay(5)" id="play-button5" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm5"></span>
+                        </button>
+                    </div>
+                   
+                    <div>
+                        <button onclick="togglePlay(6)" id="play-button6" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm6"></span>
+                        </button>
                     </div>
                     <div>
-                        <button onclick="togglePlay(7)" id="play-button7" class="button">Play</button>
-                    </div>
-                    <div>
-                        <button onclick="togglePlay(8)" id="play-button8" class="button">Play</button>
-                    </div>
-                    <div>
-                        <button onclick="togglePlay(9)" id="play-button9" class="button">Play</button>
+                        <button onclick="togglePlay(7)" id="play-button7" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm7"></span>
+                        </button>
                     </div>
 
                     <div>
-                        <button onclick="togglePlay(10)" id="play-button10" class="button">Play</button>
+                        <button onclick="togglePlay(8)" id="play-button8" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm8"></span>
+                        </button>
                     </div>
                     <div>
-                        <button onclick="togglePlay(11)" id="play-button11" class="button">Play</button>
+                        <button onclick="togglePlay(9)" id="play-button9" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm9"></span>
+                        </button>
                     </div>
                 </section>
 
@@ -994,13 +261,23 @@
 
                 <section id="flex-container-1" class="FlexContainer">
                     <div>
-                        <button onclick="togglePlay(12)" id="play-button12" class="button">Play</button>
+                        <button onclick="togglePlay(10)" id="play-button10" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm10"></span>
+                        </button>
                     </div>
                     <div>
-                        <button onclick="togglePlay(13)" id="play-button13" class="button">Play</button>
+                        <button onclick="togglePlay(11)" id="play-button11" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm11"></span>
+                        </button>
                     </div>
                     <div>
-                        <button onclick="togglePlay(14)" id="play-button14" class="button">Play</button>
+                        <button onclick="togglePlay(12)" id="play-button12" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm12"></span>
+                        </button>
+
                     </div>
 
 
@@ -1025,13 +302,22 @@
 
                 <section id="flex-container-1" class="FlexContainer">
                     <div>
-                        <button onclick="togglePlay(15)" id="play-button15" class="button">Play</button>
+                        <button onclick="togglePlay(13)" id="play-button13" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm13"></span>
+                        </button>
                     </div>
                     <div>
-                        <button onclick="togglePlay(16)" id="play-button16" class="button">Play</button>
+                        <button onclick="togglePlay(14)" id="play-button14" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm14"></span>
+                        </button>
                     </div>
                     <div>
-                        <button onclick="togglePlay(17)" id="play-button17" class="button">Play</button>
+                        <button onclick="togglePlay(15)" id="play-button15" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm15"></span>
+                        </button>
                     </div>
 
 
@@ -1043,18 +329,38 @@
             <!-- LOOP 5-->
             <input type="radio" name="tabs" id="tab5" onclick="switchTab(5)">
             <label for="tab5">
-                <img src="images/turntable.png" alt="Image description" class="tab-image">
-                <span class="mobile-text">Looper Name Here</span>
+                <img src="images/nebula_loops.jpg" alt="Image description" class="tab-image">
+                <span class="mobile-text">B.Hayes | Nebula Loops</span>
             </label>
             <div class="tab">
-                <h4>LooperBeats Title and Artist Name Here</h4>
+                <h4>B.Hayes | Nebula Loops</h4>
                 <div class="tab-content">
                     <p> follow links: ig @beatmaker | soundcloud | etc ..</p>
                 </div>
 
-                <img src="images/turntable.png" class="responsive-image" alt="Responsive image">
+                <img src="images/nebula_loops.jpg" class="responsive-image" alt="Responsive image">
 
                 <section id="flex-container-1" class="FlexContainer">
+                    <div>
+                        <button onclick="togglePlay(16)" id="play-button16" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm16"></span>
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="togglePlay(17)" id="play-button17" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm17"></span>
+                        </button>
+                    </div>
+                    <div>
+                        <button onclick="togglePlay(18)" id="play-button18" class="button">
+                            <!-- Display initial BPM value from the map -->
+                            <span id="bpm18"></span>
+                        </button>
+                    </div>
+
+
                 </section>
 
             </div>
@@ -1105,7 +411,6 @@
         <div class="pitch-controls">
             <a href="#loops-title" id="go-to-loop-selector">
                 <button id="previous-btn"><i class="bi bi-arrow-left-short"></i>Back</button>
-
             </a>
             <div class="controls-container">i
                 <div class="pitch-control-title">
@@ -1174,32 +479,42 @@
     <!-- // END OF HTML //-->
 
     <!-- // starting of JS //-->
-
     <script>
+        // Create an audio context 
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        let source;
+        const buffers = {};
+        let isPlaying = false;
+        let activeLoop = null;
+        const playbackRates = {};
+        const taps = [];
+        let lastTapTime = 0;
 
-        //Initialize Loop Player//
-
-        var audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        var source;
-        var buffers = {};
-        var isPlaying = false;
-        var activeLoop = null;
-        var playbackRates = {};
-
+        // Function to load audio from a URL and decode it
         function loadAudio(url, loopNumber) {
-            var request = new XMLHttpRequest();
+            const request = new XMLHttpRequest();
             request.open("GET", url, true);
             request.responseType = "arraybuffer";
-            request.onload = function () {
-                audioContext.decodeAudioData(request.response, function (decodedBuffer) {
+            request.onload = () => {
+                audioContext.decodeAudioData(request.response, (decodedBuffer) => {
                     buffers[loopNumber] = decodedBuffer;
+                    setInitialBpm(loopNumber);
                 });
             };
             request.send();
         }
 
+        // Set initial BPM values in the buttons
+        function setInitialBpm(loopNumber) {
+            const bpmElement = document.getElementById("bpm" + loopNumber);
+            if (bpmElement) {
+                bpmElement.innerText = trackInfoMap[loopNumber].bpm + "";
+            }
+        }
+
+        // Function to play a loaded audio buffer
         function playBuffer(loopNumber) {
-            var buffer = buffers[loopNumber];
+            const buffer = buffers[loopNumber];
             if (buffer) {
                 if (source) {
                     source.stop();
@@ -1208,13 +523,14 @@
                 source.buffer = buffer;
                 source.loop = true;
                 source.connect(audioContext.destination);
-                source.playbackRate.value = playbackRates[loopNumber] || 1; // Set the initial playback rate
+                source.playbackRate.value = playbackRates[loopNumber] || 1;
                 source.start(0);
                 isPlaying = true;
                 activeLoop = loopNumber;
             }
         }
 
+        // Function to stop the currently playing buffer
         function stopBuffer() {
             if (source) {
                 source.stop();
@@ -1223,125 +539,141 @@
             }
         }
 
+        // Function to toggle play/stop for a loop
         function togglePlay(loopNumber) {
-            var buttonElement = document.getElementById("play-button" + loopNumber);
-            var activeButtonElement = document.getElementById("play-button" + activeLoop);
+            const buttonElement = document.getElementById("play-button" + loopNumber);
+            const activeButtonElement = document.getElementById("play-button" + activeLoop);
 
             if (loopNumber === activeLoop) {
                 stopBuffer();
-                buttonElement.innerText = "Play";
+                buttonElement.innerText = trackInfoMap[loopNumber].bpm + "";
                 buttonElement.style.opacity = "1";
             } else {
                 if (activeButtonElement) {
-                    activeButtonElement.innerText = "Play";
+                    activeButtonElement.innerText = trackInfoMap[activeLoop].bpm + "";
                     activeButtonElement.style.opacity = "1";
                 }
                 playBuffer(loopNumber);
-                buttonElement.innerText = "Stop";
+                buttonElement.innerHTML = "" + trackInfoMap[loopNumber].bpm + "";
                 buttonElement.style.opacity = "0.5";
             }
         }
 
+        // Function to change the playback rate of a loop
         function changePlaybackRate(loopNumber, rate) {
             playbackRates[loopNumber] = rate;
-            if (activeLoop === loopNumber) {
+            if (activeLoop === loopNumber && source) {
                 source.playbackRate.value = rate;
             }
         }
 
-        // Load the audio files on page load.
-        loadAudio("audio/oxu_Les Notres (Bootleg by Zoum).mp3", 1);
-        loadAudio("audio/eti_Dont Matter (Bootleg by Zoum).mp3", 2);
-        loadAudio("audio/txl_Hymn (Bootleg by Zoum).mp3", 3);
-        loadAudio("audio/bfo_Opium (Bootleg by Zoum).mp3", 4);
-        loadAudio("audio/beforeDawn2.mp3", 5);
-        loadAudio("audio/loopTrap1.mp3", 6);
-        loadAudio("audio/daysOfWonder2.mp3", 7);
-        loadAudio("audio/drumsOnly.mp3", 8);
-        loadAudio("audio/frontinFlip2.mp3", 9);
-        loadAudio("audio/landsOfTheMist2.mp3", 10);
-        loadAudio("audio/qwerty2.mp3", 11);
-        loadAudio("audio/89 elements/byp_jeru-tha-damaja-999-pa-cent-instrumental.mp3", 12);
-        loadAudio("audio/89 elements/gwa_schlass12.mp3", 13);
-        loadAudio("audio/89 elements/jca_plusma-x-loopacca-tan.mp3", 14);
-        loadAudio("audio/Pharaon looper/bpy_Loop2 - 97 bpm.mp3", 15);
-        loadAudio("audio/Pharaon looper/fvg_Loop3 - 100 bpm.mp3", 16);
-        loadAudio("audio/Pharaon looper/pxf_Loop4 - 90 bpm.mp3", 17);
+        // Define a BPM for each loop 
 
-        document.getElementById("go-to-loop-selector").addEventListener("click", function () {
-            // Scroll to the element with id "loops-title"
-            const loopsTitle = document.getElementById("loops-title");
-            loopsTitle.scrollIntoView({ behavior: "smooth" });
+        const trackInfoMap = {
+        // B.Hayes|Laylow bpm
+            1: { bpm: 88 },
+            2: { bpm: 89 },
+            3: { bpm: 97 },
+            4: { bpm: 88 },
+            5: { bpm: 70 },
+            6: { bpm: 92 },
+            7: { bpm: 75 },
+            8: { bpm: 102 },
+            9: { bpm: 103 },
+         // 89 Elements bpm
+            10: { bpm: 91 },
+            11: { bpm: 77 },
+            12: { bpm: 68 },
+         // Pharaon bpm
+            13: { bpm: 97 },
+            14: { bpm: 100 },
+            15: { bpm: 90 },
+        // B.Hayes|Nebula bpm
+            16: { bpm: 120 },
+            17: { bpm: 146 },
+            18: { bpm: 94 },
+        };
 
-            // Refresh the page after a short delay (e.g., 500 milliseconds)
-            setTimeout(function () {
-                window.location.reload();
-            }, 500);
-        });
+        //End of bpm list //
 
-        //Global Pitch Control//
-        var globalPitchControl = document.getElementById("global-pitch-control");
+        // Load an audio loop to a specified button number //
+
+        // Zoum loops 
+        loadAudio("audio/zoum_loops/oxu_Les Notres (Bootleg by Zoum).mp3", 1);
+        loadAudio("audio/zoum_loops/eti_Dont Matter (Bootleg by Zoum).mp3", 2);
+        loadAudio("audio/zoum_loops/txl_Hymn (Bootleg by Zoum).mp3", 3);
+        loadAudio("audio/zoum_loops/bfo_Opium (Bootleg by Zoum).mp3", 4);
+        // B.Hayes Lay Low loops
+        loadAudio("audio/b.hayes_laylow_loops/beforeDawn2.mp3", 5);
+        loadAudio("audio/b.hayes_laylow_loops/daysOfWonder2.mp3", 6);
+        loadAudio("audio/b.hayes_laylow_loops/drumsOnly.mp3", 7);
+        loadAudio("audio/b.hayes_laylow_loops/frontinFlip2.mp3", 8);
+        loadAudio("audio/b.hayes_laylow_loops/landsOfTheMist2.mp3", 9);
+        // 89 elements loops
+        loadAudio("audio/89_elements_loops/byp_jeru-tha-damaja-999-pa-cent-instrumental.mp3", 10);
+        loadAudio("audio/89_elements_loops/gwa_schlass12.mp3", 11);
+        loadAudio("audio/89_elements_loops/jca_plusma-x-loopacca-tan.mp3", 12);
+        // Pharaon loops
+        loadAudio("audio/pharaon_loops/bpy_Loop2 - 97 bpm.mp3", 13);
+        loadAudio("audio/pharaon_loops/fvg_Loop3 - 100 bpm.mp3", 14);
+        loadAudio("audio/pharaon_loops/pxf_Loop4 - 90 bpm.mp3", 15);
+        // B.Hayes | Nebula loops
+        loadAudio("audio/b.hayes_nebula_loops/crazySpaces_120.mp3", 16);
+        loadAudio("audio/b.hayes_nebula_loops/d&b_146.mp3", 17);
+        loadAudio("audio/b.hayes_nebula_loops/slip_94.mp3", 18);
+
+        // Load audio list End //
+
+
+
+        // Global Pitch Control
+        const globalPitchControl = document.getElementById("global-pitch-control");
 
         function changeGlobalPitch(pitchValue) {
-            for (var loopNumber = 1; loopNumber <= 17; loopNumber++) {
+            for (let loopNumber = 1; loopNumber <= 17; loopNumber++) {
                 changePlaybackRate(loopNumber, pitchValue);
             }
         }
 
         function resetGlobalPitch() {
-            globalPitchControl.value = 1; // Set the value back to default (1 in this case)
-            changeGlobalPitch(1); // Call changeGlobalPitch() with default value to reset the pitch sound
+            globalPitchControl.value = 1;
+            changeGlobalPitch(1);
         }
 
+        // Toggle Pitch Control
         const pitchControl = document.getElementById('global-pitch-control');
         const toggleBtn = document.getElementById('pitch-toggle');
-
         let isPitchEnabled = true;
-        toggleBtn.addEventListener('click', () => {
 
-            // Toggle state
+        toggleBtn.addEventListener('click', () => {
             isPitchEnabled = !isPitchEnabled;
 
             if (isPitchEnabled) {
-                // Enable pitch
                 pitchControl.disabled = false;
-
             } else {
-                // Disable pitch  
                 pitchControl.disabled = true;
             }
 
-            // Update button text
-            if (isPitchEnabled) {
-                toggleBtn.textContent = '[Lock Pitch]';
-                toggleBtn.style.color = "rgb(222, 222, 222)"; // Set the color to the enabled color
-            } else {
-                toggleBtn.textContent = 'Unlock Pitch';
-                toggleBtn.style.color = "rgb(156, 45, 20)"; // Set the color to the disabled color
-
-            }
-
-
+            toggleBtn.textContent = isPitchEnabled ? '[Lock Pitch]' : 'Unlock Pitch';
+            toggleBtn.style.color = isPitchEnabled ? "rgb(222, 222, 222)" : "rgb(156, 45, 20)";
         });
 
-        // Hide initially on page load
+        // Hide Pitch control on page load
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.pitch-controls').style.display = 'none';
         });
 
-
-        //Tabs Logic start//
-
+        // Tabs Logic
         function switchTab(tabIndex) {
 
             // Hide all tabs
-            var tabs = document.querySelectorAll(".tab");
-            tabs.forEach(function (tab) {
+            const tabs = document.querySelectorAll(".tab");
+            tabs.forEach((tab) => {
                 tab.style.display = "none";
             });
 
             // Show the selected tab
-            var selectedTab = document.querySelectorAll(".tab")[tabIndex];
+            const selectedTab = document.querySelectorAll(".tab")[tabIndex];
             selectedTab.style.display = "block";
 
             // Scroll to tab on desktop
@@ -1354,13 +686,13 @@
             }
 
             // Hide all labels
-            var labels = document.querySelectorAll(".tabs label");
-            labels.forEach(function (label) {
+            const labels = document.querySelectorAll(".tabs label");
+            labels.forEach((label) => {
                 label.style.display = "none";
             });
 
             // Show selected label
-            var selectedLabel = labels[tabIndex];
+            const selectedLabel = labels[tabIndex];
             selectedLabel.style.display = "block";
 
             if (selectedTab) {
@@ -1368,18 +700,27 @@
             } else {
                 document.querySelector('.pitch-controls').style.display = 'none';
             }
-
         }
 
+        // Back button load
+        document.getElementById("go-to-loop-selector").addEventListener("click", function () {
+            // Scroll to the element with id "loops-title"
+            const loopsTitle = document.getElementById("loops-title");
+            loopsTitle.scrollIntoView({ behavior: "smooth" });
 
-        //Back Button Logic//
-        var backBtn = document.getElementById("back-btn");
+            // Refresh the page after a short delay (e.g., 500 milliseconds)
+            setTimeout(function () {
+                window.location.reload();
+            }, 500);
+        });
+
+        // Back Button Logic
+        const backBtn = document.getElementById("back-btn");
 
         backBtn.addEventListener("click", function () {
-
             // Hide tabs
-            var tabs = document.querySelectorAll(".tab");
-            tabs.forEach(function (tab) {
+            const tabs = document.querySelectorAll(".tab");
+            tabs.forEach((tab) => {
                 tab.style.display = "none";
             });
 
@@ -1387,44 +728,60 @@
             document.querySelector('.pitch-controls').style.display = 'none';
 
             // Show labels
-            var labels = document.querySelectorAll(".tabs label");
-            labels.forEach(function (label) {
+            const labels = document.querySelectorAll(".tabs label");
+            labels.forEach((label) => {
                 label.style.display = "block";
             });
-
         });
 
-    </script>
-
-    <script>
         // Modal Logic
+       // Modal Logic for modal 1
+const modal1 = document.getElementById('modal1');
+const btn1 = document.getElementById("float-btn1");
+const close1 = document.getElementsByClassName("close")[0]; // Make sure this is the close button for modal 1
 
-        // Get modal element
-        var modal = document.getElementById('modal');
+// Function to open modal 1
+function openModal1() {
+    modal1.style.display = "block";
+}
 
-        // Get open modal button
-        var btn = document.getElementById("float-btn");
+// Function to close modal 1
+close1.onclick = function () {
+    modal1.style.display = "none";
+}
 
-        // Get close button
-        var close = document.getElementsByClassName("close")[0];
+// Function to close modal 1 when clicking outside
+window.onclick = function (event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+}
 
-        // Open modal when button clicked
-        function openModal() {
-            modal.style.display = "block";
-        }
+// Modal Logic for modal 2
+const modal2 = document.getElementById('modal2');
+const btn2 = document.getElementById("float-btn2");
+const close2 = document.getElementsByClassName("close")[1]; // Make sure this is the close button for modal 2
 
-        // Close modal when close button clicked  
-        close.onclick = function () {
-            modal.style.display = "none";
-        }
+// Function to open modal 2
+function openModal2() {
+    modal2.style.display = "block";
+}
 
-        // Close modal if outside click    
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+// Function to close modal 2
+close2.onclick = function () {
+    modal2.style.display = "none";
+}
 
+// Function to close modal 2 when clicking outside
+window.onclick = function (event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+
+    // Modal Logic End
+
+    // End of JS //
 
     </script>
 
