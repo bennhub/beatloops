@@ -553,6 +553,7 @@ button[onclick="resetGlobalPitch()"] {
     padding: 20px;
     border: 1px solid #fbfbfb;
     width: 80%;
+    max-width: 600px; /* Adjust the max-width as needed */
 }
 
 .close {
@@ -566,6 +567,16 @@ button[onclick="resetGlobalPitch()"] {
 
 .close:hover {
     color: #000;
+}
+
+.audio-list {
+    list-style: none;
+    padding: 0px;
+}
+
+.audio-list li {
+    display: inline-block;
+    margin: -5px;
 }
 
 #float-btn {
