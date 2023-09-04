@@ -66,27 +66,45 @@
                                 <ul class="audio-list">
                                     <li><audio controls
                                             src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part2.mp3"></audio>
-                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part2.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                        <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part2.mp3"
+                                            download target="_blank">
+                                            <h4 class="bi bi-download"></h4>
+                                        </a>
                                     </li>
                                     <li><audio controls
                                             src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part3.mp3"></audio>
-                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part3.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                        <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part3.mp3"
+                                            download target="_blank">
+                                            <h4 class="bi bi-download"></h4>
+                                        </a>
                                     </li>
                                     <li><audio controls
                                             src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part1.mp3"></audio>
-                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part1.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                        <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part1.mp3"
+                                            download target="_blank">
+                                            <h4 class="bi bi-download"></h4>
+                                        </a>
                                     </li>
                                     <li><audio controls
                                             src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part4.mp3"></audio>
-                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part4.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                        <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part4.mp3"
+                                            download target="_blank">
+                                            <h4 class="bi bi-download"></h4>
+                                        </a>
                                     </li>
                                     <li><audio controls
                                             src="https://soundsozai.com/wp-content/uploads/2020/06/Pizzicato_loop_92bpm.mp3"></audio>
-                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/Pizzicato_loop_92bpm.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                        <a href="https://soundsozai.com/wp-content/uploads/2020/06/Pizzicato_loop_92bpm.mp3"
+                                            download target="_blank">
+                                            <h4 class="bi bi-download"></h4>
+                                        </a>
                                     </li>
                                     <li><audio controls
                                             src="https://soundsozai.com/wp-content/uploads/2020/06/Flute_loop_92bpm.mp3"></audio>
-                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/Flute_loop_92bpm.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                        <a href="https://soundsozai.com/wp-content/uploads/2020/06/Flute_loop_92bpm.mp3"
+                                            download target="_blank">
+                                            <h4 class="bi bi-download"></h4>
+                                        </a>
                                     </li>
                                 </ul>
                                 <span class="close">&times;</span>
@@ -401,26 +419,6 @@
 
             </div>
 
-            <!-- LOOP 7-->
-            <input type="radio" name="tabs" id="tab7" onclick="switchTab(7)">
-            <label for="tab7">
-                <img src="images/turntable.png" alt="Image description" class="tab-image">
-                <span class="mobile-text">Looper Name Here</span>
-            </label>
-            <div class="tab">
-                <h4>LooperBeats Title and Artist Name Here</h4>
-                <div class="tab-content">
-                    <p> follow links: ig @beatmaker | soundcloud | etc ..</p>
-                </div>
-
-                <img src="images/turntable.png" class="responsive-image" alt="Responsive image">
-
-                <section id="flex-container-1" class="FlexContainer">
-                </section>
-
-            </div>
-
-
         </div>
 
 
@@ -643,17 +641,17 @@
         // Download Player Logic
 
         function toggleAudio() {
-    const audio = document.getElementById('audio');
-    const playButton = document.getElementById('play-button');
+            const audio = document.getElementById('audio');
+            const playButton = document.getElementById('play-button');
 
-    if (audio.paused) {
-        audio.play();
-        playButton.innerHTML = '<i class="bi bi-stop bi-3x"></i>';
-    } else {
-        audio.pause();
-        playButton.innerHTML = '<i class="bi bi-play bi-3x"></i>';
-    }
-}
+            if (audio.paused) {
+                audio.play();
+                playButton.innerHTML = '<i class="bi bi-stop bi-3x"></i>';
+            } else {
+                audio.pause();
+                playButton.innerHTML = '<i class="bi bi-play bi-3x"></i>';
+            }
+        }
 
 
         // Download Player Logic End
