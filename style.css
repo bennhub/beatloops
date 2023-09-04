@@ -549,12 +549,14 @@ button[onclick="resetGlobalPitch()"] {
 /* Modal Content/Box */
 .modal-content {
     background-color: #191919;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #fbfbfb;
     width: 80%;
     max-width: 600px; /* Adjust the max-width as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset to center */
 }
+
 
 .close {
     position: absolute;
@@ -569,16 +571,69 @@ button[onclick="resetGlobalPitch()"] {
     color: #000;
 }
 
-.audio-list {
-    list-style: none;
-    padding: 0px;
+/* Change the color of the default play button */
+audio::-webkit-media-controls-play-button {
+    background-color: rgb(255, 234, 0); /* Change to the color you prefer */
+}
+audio::-webkit-media-controls-start-playback-button {
+    background-color: rgb(255, 255, 255); /* Change to the color you prefer */
+}
+audio::-webkit-media-controls-time-remaining-display {
+    background-color: rgb(255, 255, 255); /* Change to the color you prefer */
+    display:none;
+}
+audio::-webkit-media-controls-current-time-display {
+    background-color: rgb(255, 255, 255); /* Change to the color you prefer */
+    display:none;
+}
+audio::-webkit-media-controls-volume-slider {
+    background-color: rgb(255, 251, 251); /* Change to the color you prefer */
+}
+audio::-webkit-media-controls-mute-button {
+    background-color: rgb(255, 255, 255); /* Change to the color you prefer */
+    display:none;
+}
+audio::-webkit-media-controls-timeline {
+    background-color: rgba(248, 247, 247, 0.812);
+    width:70px;
+}
+audio::-webkit-media-controls-panel {
+    background-color: #191919; /* Change to the color you prefer */
 }
 
-.audio-list li {
-    display: inline-block;
-    margin: -5px;
+/* Default styles for the audio player */
+
+/* Default styles for the audio player */
+audio {
+    width: 350px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+    border: 1px solid #fff;
+    margin: 0 auto; /* Center the player horizontally */
 }
 
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    audio {
+        width: 100%; /* Make the width 100% for smaller screens */
+        height: 40px; /* Allow the height to adjust proportionally */
+        margin: 0; /* Remove margin to make it left-aligned */
+    }
+}
+
+
+
+
+  a {
+    text-decoration: none;
+    color: #007BFF; /* Link color */
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #0056b3; /* Hover color */
+  }
+  
 #float-btn {
     width: 40px;
     height: 40px;

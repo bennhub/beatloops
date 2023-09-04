@@ -62,14 +62,32 @@
                         <div id="modal2" class="modal">
                             <!-- Modal content -->
                             <div class="modal-content">
-                                <p>Download these scratch samples for free</p>
+                                <p>Scratch sample downloads</p>
                                 <ul class="audio-list">
-                                    <li><audio controls src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part2.mp3"></audio></li>
-                                    <li><audio controls src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part3.mp3"></audio></li>
-                                    <li><audio controls src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part1.mp3"></audio></li>
-                                    <li><audio controls src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part4.mp3"></audio></li>
-                                    <li><audio controls src="https://soundsozai.com/wp-content/uploads/2020/06/Pizzicato_loop_92bpm.mp3"></audio></li>
-                                    <li><audio controls src="https://soundsozai.com/wp-content/uploads/2020/06/Flute_loop_92bpm.mp3"></audio></li>
+                                    <li><audio controls
+                                            src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part2.mp3"></audio>
+                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part2.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                    </li>
+                                    <li><audio controls
+                                            src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part3.mp3"></audio>
+                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part3.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                    </li>
+                                    <li><audio controls
+                                            src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part1.mp3"></audio>
+                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part1.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                    </li>
+                                    <li><audio controls
+                                            src="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part4.mp3"></audio>
+                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/good_source_of_scratch_part4.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                    </li>
+                                    <li><audio controls
+                                            src="https://soundsozai.com/wp-content/uploads/2020/06/Pizzicato_loop_92bpm.mp3"></audio>
+                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/Pizzicato_loop_92bpm.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                    </li>
+                                    <li><audio controls
+                                            src="https://soundsozai.com/wp-content/uploads/2020/06/Flute_loop_92bpm.mp3"></audio>
+                                            <a href="https://soundsozai.com/wp-content/uploads/2020/06/Flute_loop_92bpm.mp3" download target="_blank"><h4 class="bi bi-download"></h4></a>
+                                    </li>
                                 </ul>
                                 <span class="close">&times;</span>
                             </div>
@@ -212,7 +230,7 @@
                             <span id="bpm5"></span>
                         </button>
                     </div>
-                   
+
                     <div>
                         <button onclick="togglePlay(6)" id="play-button6" class="button">
                             <!-- Display initial BPM value from the map -->
@@ -568,7 +586,7 @@
         // Define a BPM for each loop 
 
         const trackInfoMap = {
-        // B.Hayes|Laylow bpm
+            // B.Hayes|Laylow bpm
             1: { bpm: 88 },
             2: { bpm: 89 },
             3: { bpm: 97 },
@@ -578,15 +596,15 @@
             7: { bpm: 75 },
             8: { bpm: 102 },
             9: { bpm: 103 },
-         // 89 Elements bpm
+            // 89 Elements bpm
             10: { bpm: 91 },
             11: { bpm: 77 },
             12: { bpm: 68 },
-         // Pharaon bpm
+            // Pharaon bpm
             13: { bpm: 97 },
             14: { bpm: 100 },
             15: { bpm: 90 },
-        // B.Hayes|Nebula bpm
+            // B.Hayes|Nebula bpm
             16: { bpm: 120 },
             17: { bpm: 146 },
             18: { bpm: 94 },
@@ -621,6 +639,24 @@
         loadAudio("audio/b.hayes_nebula_loops/slip_94.mp3", 18);
 
         // Load audio list End //
+
+        // Download Player Logic
+
+        function toggleAudio() {
+    const audio = document.getElementById('audio');
+    const playButton = document.getElementById('play-button');
+
+    if (audio.paused) {
+        audio.play();
+        playButton.innerHTML = '<i class="bi bi-stop bi-3x"></i>';
+    } else {
+        audio.pause();
+        playButton.innerHTML = '<i class="bi bi-play bi-3x"></i>';
+    }
+}
+
+
+        // Download Player Logic End
 
 
 
@@ -733,49 +769,49 @@
         });
 
         // Modal Logic
-       // Modal Logic for modal 1
-const modal1 = document.getElementById('modal1');
-const btn1 = document.getElementById("float-btn1");
-const close1 = document.getElementsByClassName("close")[0]; // Make sure this is the close button for modal 1
+        // Modal Logic for modal 1
+        const modal1 = document.getElementById('modal1');
+        const btn1 = document.getElementById("float-btn1");
+        const close1 = document.getElementsByClassName("close")[0]; // Make sure this is the close button for modal 1
 
-// Function to open modal 1
-function openModal1() {
-    modal1.style.display = "block";
-}
+        // Function to open modal 1
+        function openModal1() {
+            modal1.style.display = "block";
+        }
 
-// Function to close modal 1
-close1.onclick = function () {
-    modal1.style.display = "none";
-}
+        // Function to close modal 1
+        close1.onclick = function () {
+            modal1.style.display = "none";
+        }
 
-// Function to close modal 1 when clicking outside
-window.onclick = function (event) {
-    if (event.target == modal1) {
-        modal1.style.display = "none";
-    }
-}
+        // Function to close modal 1 when clicking outside
+        window.onclick = function (event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+        }
 
-// Modal Logic for modal 2
-const modal2 = document.getElementById('modal2');
-const btn2 = document.getElementById("float-btn2");
-const close2 = document.getElementsByClassName("close")[1]; // Make sure this is the close button for modal 2
+        // Modal Logic for modal 2
+        const modal2 = document.getElementById('modal2');
+        const btn2 = document.getElementById("float-btn2");
+        const close2 = document.getElementsByClassName("close")[1]; // Make sure this is the close button for modal 2
 
-// Function to open modal 2
-function openModal2() {
-    modal2.style.display = "block";
-}
+        // Function to open modal 2
+        function openModal2() {
+            modal2.style.display = "block";
+        }
 
-// Function to close modal 2
-close2.onclick = function () {
-    modal2.style.display = "none";
-}
+        // Function to close modal 2
+        close2.onclick = function () {
+            modal2.style.display = "none";
+        }
 
-// Function to close modal 2 when clicking outside
-window.onclick = function (event) {
-    if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-}
+        // Function to close modal 2 when clicking outside
+        window.onclick = function (event) {
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+        }
 
     // Modal Logic End
 
